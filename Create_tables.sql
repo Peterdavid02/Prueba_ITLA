@@ -8,6 +8,11 @@ IF ( NOT EXISTS (SELECT *
 		id INT PRIMARY KEY IDENTITY(1,1),
 		type VARCHAR(50) NOT NULL
 	); 
+	
+	INSERT INTO Tipo_de_identificación (type)
+ 	  VALUES ('Cedula');
+ 	INSERT INTO Tipo_de_identificación (type)
+	  VALUES ('Passaporte');
 	END
 	ELSE PRINT('LA TABLA Tipo_de_identificación YA EXISTE ')
 
