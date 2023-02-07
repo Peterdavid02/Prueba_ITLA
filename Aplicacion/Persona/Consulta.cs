@@ -23,10 +23,8 @@ namespace Aplicacion.personas
             public async Task<List<persona>> Handle(Listapersonas request, CancellationToken cancellationToken)
             {
         
-            var personas = _context.persona.(
-                "GetProductsByCategoryId @CategoryId",
-                new SqlParameter("CategoryId", 1)
-            );
+            var personas = await _context.persona.ToListAsync();
+            return personas
             }
         }
     }
