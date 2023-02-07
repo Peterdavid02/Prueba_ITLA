@@ -1,6 +1,4 @@
-Go
-use DBPRUEBA
-GO
+
 -----------------VALIDAMOS SI EXISTE EL PROCEDIMIENTO--------------------------------
 
 IF (EXISTS (SELECT * FROM sys.objects WHERE TYPE='P' AND name = 'persona_registrar'))
@@ -29,19 +27,19 @@ CREATE PROCEDURE persona_registrar(
 
 @Nombres VARCHAR(60),
 @Apellidos VARCHAR(60),
-@Identificaci髇 VARCHAR(60),
+@Identificaci贸n VARCHAR(60),
 @Fecha_de_Nacimiento VARCHAR(60),
 @tipo_id VARCHAR(60)
 )
 AS
 BEGIN
 
-INSERT INTO persona(Nombres,Apellidos,Identificaci髇,Fecha_de_Nacimiento,tipo_id)
+INSERT INTO persona(Nombres,Apellidos,Identificaci贸n,Fecha_de_Nacimiento,tipo_id)
 VALUES
 (
 @Nombres,
 @Apellidos,
-@Identificaci髇,
+@Identificaci贸n,
 @Fecha_de_Nacimiento,
 @tipo_id
 )
@@ -53,7 +51,7 @@ CREATE PROCEDURE persona_editar(
 @id INT,
 @Nombres VARCHAR(60),
 @Apellidos VARCHAR(60),
-@Identificaci髇 VARCHAR(60),
+@Identificaci贸n VARCHAR(60),
 @Fecha_de_Nacimiento VARCHAR(60),
 @tipo_id VARCHAR(60)
 )
@@ -62,11 +60,11 @@ BEGIN
 UPDATE P SET 
 P.Nombres  = @Nombres ,
 P.Apellidos = @Apellidos,
-P.Identificaci髇 = @Identificaci髇,
+P.Identificaci贸n = @Identificaci贸n,
 P.Fecha_de_Nacimiento = @Fecha_de_Nacimiento,
 p.tipo_id = @tipo_id
 FROM persona P 
-INNER JOIN Tipo_de_identificaci髇 T
+INNER JOIN Tipo_de_identificaci贸n T
 ON P.id = T.id
 WHERE P.id = @id
 
