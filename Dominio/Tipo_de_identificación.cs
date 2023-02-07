@@ -1,9 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Dominio
 {
     public class Tipo_de_identificación
-    {
-        public int id {get;set;}
-        public string type {get;set;}
-        public persona personaid {get;set;}
+     {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        [Column(TypeName = "varchar(50)")]
+        public string Type { get; set; }
     }
 }

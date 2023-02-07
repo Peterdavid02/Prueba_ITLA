@@ -6297,11 +6297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6318,8 +6318,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Aplicacion\\Aplicacion.csproj": {
-              "projectPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Aplicacion\\Aplicacion.csproj"
+            "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Aplicacion\\Aplicacion.csproj"
             }
           }
         }

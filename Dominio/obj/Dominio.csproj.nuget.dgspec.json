@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

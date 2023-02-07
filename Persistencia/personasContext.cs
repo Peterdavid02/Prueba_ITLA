@@ -8,7 +8,7 @@ namespace Persistencia
         public personasContext(DbContextOptions options) : base(options){
 
         }
-
+    
         public DbSet<persona> persona {get;set;}
         public DbSet<Tipo_de_identificación> Tipo_de_identificación {get;set;}
     }

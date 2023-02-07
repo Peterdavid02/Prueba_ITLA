@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oTSkXioEcySVEoCa07UwwA1E9K0zMvO02xVxbv7cabi9QTXf5tfgYhSTEbNo5ZBPQXUga19paid0FU/wmgYNpQ==",
+  "dgSpecHash": "YSWRkYVZlO3N3M840BkEuuWqiZr9q5kxnFj0XTIGeSln3AduIZb8hScErjQFwIsgkDInvE4klha6blSXe3iCzg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

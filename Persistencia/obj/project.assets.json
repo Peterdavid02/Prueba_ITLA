@@ -6062,11 +6062,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\Persistencia.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\Persistencia.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6083,8 +6083,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {
-              "projectPath": "c:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Dominio\\Dominio.csproj"
             }
           }
         }
