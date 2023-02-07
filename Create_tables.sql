@@ -22,7 +22,7 @@ IF (NOT EXISTS (SELECT *
 					Apellidos VARCHAR(50) NOT NULL,
 					Identificacion VARCHAR(50) NOT NULL,
 					Fecha_de_Nacimiento DATE NOT NULL,
-					tipo_id  int NOT NULL,
+					tipo_id  int,
 					FOREIGN KEY (tipo_id) REFERENCES Tipo_de_identificación(id)
 					);
 					END
