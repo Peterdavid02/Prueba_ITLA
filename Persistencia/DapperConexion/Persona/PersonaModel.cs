@@ -14,5 +14,6 @@ namespace Persistencia.DapperConexion.Persona
         public DateTime Fecha_de_Nacimiento { get; set; }
 
         public string tipo_id { get; set; }
+         public string Tipo { get; set; }
     }
 }

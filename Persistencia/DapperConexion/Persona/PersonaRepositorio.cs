@@ -22,9 +22,31 @@ namespace Persistencia.DapperConexion.Persona
             throw new System.NotImplementedException();
         }
 
-        public Task<int> Nuevo(PersonaModel parametros)
+        public async Task<int> Nuevo(string Nombre, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id )
         {
-            throw new System.NotImplementedException();
+            var storeProcedure = "persona_registrar";
+            try{
+                var connection = _factoryConnection.GetDbConnection();
+                var resultado = await connection.ExecuteAsync(
+                    storeProcedure, new
+                    {
+                        Nombres= Nombre,
+                        Apellidos = Apellidos,
+                        Identificacion = Identificacion,
+                        Fecha_de_Nacimiento = Fecha_de_Nacimiento,
+                        tipo_id = tipo_id
+
+                    },
+                    commandType: CommandType.StoredProcedure
+                );     
+                    _factoryConnection.CloseConnection();
+
+                    return resultado;
+               
+                
+            }catch(Exception e){
+                throw  new Exception("Error en la Consulta de datos",e);
+            }
         }
 
         public async Task<IEnumerable<PersonaModel>> ObtenerLista()

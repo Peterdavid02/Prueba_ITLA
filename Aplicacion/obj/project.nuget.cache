@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hgrlfeWHkEqJoEBek7Lz6dETAzF7VCXITurwpurYHErl/FBvQlkiENhneqi3h0/r2wtrCmACgwAbNcLP0KGyfg==",
+  "dgSpecHash": "S2waQgTaz5iwf4zYkOtUY+td3z44QVXQrcM2ktBe4Lc2GPSzWFvnxnNzRKayH+vGVmPSrJwsyzkfYZ6Bjza78w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Prueba_ITLA\\Aplicacion\\Aplicacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.4\\dapper.2.0.4.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.1.0\\fluentvalidation.aspnetcore.11.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.0.0\\mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",

@@ -1,4 +1,3 @@
-
 -----------------VALIDAMOS SI EXISTE EL PROCEDIMIENTO--------------------------------
 
 IF (EXISTS (SELECT * FROM sys.objects WHERE TYPE='P' AND name = 'persona_registrar'))
@@ -34,7 +33,7 @@ CREATE PROCEDURE persona_registrar(
 AS
 BEGIN
 
-INSERT INTO persona(Nombres,Apellidos,Identificación,Fecha_de_Nacimiento,tipo_id)
+INSERT INTO persona(Nombres,Apellidos,Identificacion,Fecha_de_Nacimiento,tipo_id)
 VALUES
 (
 @Nombres,
@@ -51,7 +50,7 @@ CREATE PROCEDURE persona_editar(
 @id INT,
 @Nombres VARCHAR(60),
 @Apellidos VARCHAR(60),
-@Identificación VARCHAR(60),
+@Identificacion VARCHAR(60),
 @Fecha_de_Nacimiento VARCHAR(60),
 @tipo_id VARCHAR(60)
 )
@@ -60,7 +59,7 @@ BEGIN
 UPDATE P SET 
 P.Nombres  = @Nombres ,
 P.Apellidos = @Apellidos,
-P.Identificación = @Identificación,
+P.Identificacion = @Identificacion,
 P.Fecha_de_Nacimiento = @Fecha_de_Nacimiento,
 p.tipo_id = @tipo_id
 FROM persona P 
@@ -85,7 +84,16 @@ GO
 
 CREATE PROCEDURE persona_listar
 AS 
-BEGIN SELECT * FROM persona
+BEGIN 
+SET NOCOUNT ON
+SELECT
+p.Nombres,
+p.Apellidos,
+p.Identificacion,
+p.Fecha_de_Nacimiento,
+T.type AS Tipo
+FROM persona p
+inner join Tipo_de_identificación t ON p.id = t.id
 END
 GO
 
