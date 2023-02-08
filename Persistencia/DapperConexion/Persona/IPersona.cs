@@ -12,7 +12,7 @@ namespace Persistencia.DapperConexion.Persona
 
         Task<int> Nuevo(string Nombre, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id);
 
-        Task<int> Actualizar(PersonaModel parametros);
+        Task<int> Actualizar(int id, string Nombre, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id);
 
         Task<int> Elimina(int id);
 

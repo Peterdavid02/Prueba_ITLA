@@ -12,17 +12,62 @@ namespace Persistencia.DapperConexion.Persona
          public PersonaRepositorio(IFactoryConnection factoryConnection){
             _factoryConnection = factoryConnection;
          }
-        public Task<int> Actualizar(PersonaModel parametros)
+        public async Task<int> Actualizar(int id, string Nombres, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id)
         {
-            throw new System.NotImplementedException();
+             var storeProcedure = "persona_editar";
+            try
+            {
+
+                var connection = _factoryConnection.GetDbConnection();
+                var resultados = await connection.ExecuteAsync(
+                    storeProcedure,
+                    new
+                    {
+                        id = id,
+                        Nombres = Nombres,
+                        Apellidos = Apellidos,
+                        Identificacion = Identificacion,
+                        Fecha_de_Nacimiento = Fecha_de_Nacimiento,
+                        tipo_id = tipo_id
+                    },
+                    commandType: CommandType.StoredProcedure
+                );
+
+                _factoryConnection.CloseConnection();
+                return resultados;
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo editar la data de la persona", e);
+            }
+
         }
 
-        public Task<int> Elimina(int id)
+        public async Task<int> Elimina(int id)
         {
-            throw new System.NotImplementedException();
+             var storeProcedure = "persona_eliminar";
+            try
+            {
+                var connection = _factoryConnection.GetDbConnection();
+                var resultado = await connection.ExecuteAsync(
+                    storeProcedure,
+                    new
+                    {
+                        id = id
+                    },
+                    commandType: CommandType.StoredProcedure
+                );
+                _factoryConnection.CloseConnection();
+                return resultado;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo eliminar la persona",e);
+            }
         }
 
-        public async Task<int> Nuevo(string Nombre, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id )
+        public async Task<int> Nuevo(string Nombres, string Apellidos, string Identificacion, DateTime Fecha_de_Nacimiento,int tipo_id )
         {
             var storeProcedure = "persona_registrar";
             try{
@@ -30,7 +75,7 @@ namespace Persistencia.DapperConexion.Persona
                 var resultado = await connection.ExecuteAsync(
                     storeProcedure, new
                     {
-                        Nombres= Nombre,
+                        Nombres= Nombres,
                         Apellidos = Apellidos,
                         Identificacion = Identificacion,
                         Fecha_de_Nacimiento = Fecha_de_Nacimiento,
