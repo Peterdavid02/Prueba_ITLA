@@ -24,7 +24,9 @@ namespace Aplicacion.personas
             {
         
             var personas = await _context.persona.ToListAsync();
-            return personas
+            return personas;
+                
+            
             }
         }
     }

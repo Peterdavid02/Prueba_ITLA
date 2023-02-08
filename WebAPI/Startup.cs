@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Persistencia;
+using Persistencia.DapperConexion;
+using Persistencia.DapperConexion.Persona;
 
 namespace WebAPI
 {
@@ -33,7 +35,13 @@ namespace WebAPI
             services.AddDbContext<personasContext>(opt=>{
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddOptions();
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
+
+            services.Configure<ConexionConfiguracion>(Configuration.GetSection("ConnectionStrings"));
+
+            services.AddTransient<IFactoryConnection,FactoryConnection>();
+            services.AddScoped<IPersona,PersonaRepositorio>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
