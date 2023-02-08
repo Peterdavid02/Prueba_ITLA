@@ -109,9 +109,25 @@ namespace Persistencia.DapperConexion.Persona
             return personaLis;
         }
 
-        public Task<PersonaModel> ObtenerPorId(int id)
+        public async Task<PersonaModel> ObtenerPorId(int id)
         {
-            throw new System.NotImplementedException();
+            var storeProcedure = "persona_obtener";
+            PersonaModel persona = null;
+            try{
+                var connection  = _factoryConnection.GetDbConnection();
+                persona = await connection.QueryFirstAsync<PersonaModel>(
+                    storeProcedure,
+                    new {
+                        Id = id
+                    },
+                    commandType : CommandType.StoredProcedure
+                );
+
+                return persona;
+
+            }catch(Exception e){
+                throw new Exception("No se pudo encontrar la persona",e);
+            }
         }
     }
 }

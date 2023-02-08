@@ -16,12 +16,12 @@ namespace WebAPI.Controllers
             return await Mediator.Send(new consulta.Lista());
         }
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(Nuevo.Ejecuta data) {
+        public async Task<ActionResult<Unit>> Crear(Nuevo.Ejecuta_Nuevo data) {
             return await Mediator.Send(data);
         }
 
          [HttpPut("{id}")]
-        public async Task<ActionResult<Unit>> Actualizar(int id, Editar.Ejecuta data){
+        public async Task<ActionResult<Unit>> Actualizar(int id, Editar.Ejecuta_Edicion data){
             data.id = id;
             return await Mediator.Send(data);
         }
@@ -29,6 +29,11 @@ namespace WebAPI.Controllers
          [HttpDelete("{id}")]
         public async Task<ActionResult<Unit>> Eliminar(int id){
             return await Mediator.Send(new Eliminar.Ejecuta{Id = id});
+        }
+
+         [HttpGet("{id}")]
+        public async Task<ActionResult<PersonaModel>> ObtenerPorId(int id){
+            return await Mediator.Send(new consultaid.Ejecuta_obtener{Id = id});
         }
 
     }

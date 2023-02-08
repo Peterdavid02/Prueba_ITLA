@@ -9,7 +9,7 @@ namespace Aplicacion.Persona_Procedure
 {
     public class Editar
     {
-          public class Ejecuta : IRequest {
+          public class Ejecuta_Edicion : IRequest {
             public int id {get;set;}
              public string Nombres { get; set; }
             public string Apellidos { get; set; }
@@ -18,7 +18,7 @@ namespace Aplicacion.Persona_Procedure
             public int tipo_id { get; set; }
         }
 
-        public class EjecutaValida : AbstractValidator<Ejecuta>{
+        public class EjecutaValida : AbstractValidator<Ejecuta_Edicion>{
             public EjecutaValida(){
                 RuleFor(x => x.Nombres).NotEmpty();
                 RuleFor(x => x.Apellidos).NotEmpty();
@@ -26,14 +26,14 @@ namespace Aplicacion.Persona_Procedure
             }
             
         }
-        public class Manejador : IRequestHandler<Ejecuta>
+        public class Manejador : IRequestHandler<Ejecuta_Edicion>
         {
            private readonly IPersona _PersonaRepository;
             public Manejador(IPersona PersonaRepository){
                 _PersonaRepository = PersonaRepository;
             }
         
-            public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
+            public async Task<Unit> Handle(Ejecuta_Edicion request, CancellationToken cancellationToken)
             {
                 var resultado = await _PersonaRepository.Actualizar(request.id,request.Nombres, request.Apellidos, 
                 request.Identificacion,request.Fecha_de_Nacimiento,request.tipo_id);
